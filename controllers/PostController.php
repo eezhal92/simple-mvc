@@ -17,6 +17,10 @@ class PostController
 
   public function store()
   {
+    if(!Token::match(Input::get('_token'))) {
+      return Redirect::back();
+    }
+
     $v = new Validator;
 
     $v->validate(Input::all(), [

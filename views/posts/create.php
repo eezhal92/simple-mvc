@@ -18,7 +18,7 @@
       <?php } ?>
 
       <form class="#" action="<?php echo $router->generate('post-store') ?>" method="post">
-
+        <input type="hidden" name="_token" value="<?php echo Token::generate() ?>">
         <div class="form-group">
           <label>Title</label>
           <input type="text" class="form-control" name="title" placeholder="Awesome Title Goes Here">

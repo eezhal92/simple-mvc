@@ -40,7 +40,7 @@ return [
   |
   */
   'session' => [
-    'session_name' => 'user',
-    'token_name' => 'token'
+    'session_name' => '_user',
+    'token_name' => '_token'
   ]
 ];
