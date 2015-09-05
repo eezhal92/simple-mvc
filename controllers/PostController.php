@@ -69,7 +69,7 @@ class PostController
     }
 
     $id = $args['id'];
-    
+
     $post = $this->post->update($id, [
       'title' => Input::get('title'),
       'body' => Input::get('body')
@@ -89,6 +89,16 @@ class PostController
     $post = $this->post->find($id);
 
     return view('posts.show', ['post' => $post]);
+  }
+
+  public function destroy($args)
+  {
+    if($args['action'] == 'delete') {
+      if($this->post->delete($args['id'])) {
+        Session::flash('success', 'Successfully delete the post.');
+        return Redirect::to('/');
+      }
+    }
   }
 
 }

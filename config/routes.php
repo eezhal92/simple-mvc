@@ -10,6 +10,7 @@ $router->map('GET', '/posts/[i:id]', 'PostController@show', 'post-show');
 $router->map('GET', '/posts/create', 'PostController@create', 'post-create');
 $router->map('GET', '/posts/[i:id]/edit', 'PostController@edit', 'post-edit');
 $router->map('POST', '/posts/[i:id]', 'PostController@update', 'post-update');
+$router->map('POST', '/posts/[i:id]/[delete:action]', 'PostController@destroy', 'post-destroy');
 $router->map('POST', '/posts', 'PostController@store', 'post-store');
 
 // Tambahkan route disini

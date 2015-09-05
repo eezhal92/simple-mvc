@@ -90,9 +90,13 @@ abstract class Model {
    */
   public function delete($id)
   {
-    $this->db->delete($this->table, ['id', '=', $id]);
+    try {
+      $this->db->delete($this->table, ['id', '=', $id]);
 
-    return true;
+      return true;
+    } catch(Exception $e) {
+      throw new Exception("Cannot delete record.");
+    }
   }
 
 }

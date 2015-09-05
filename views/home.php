@@ -20,7 +20,10 @@
           <?php echo $post->body ?>
         </p>
         <a href="<?php echo $router->generate('post-edit', ['id' => $post->id]) ?>" class="btn btn-warning btn-round">Edit</a>
-        <a href="#" class="btn btn-danger btn-round">Hapus</a>
+        <form class="" action="<?php echo $router->generate('post-destroy', ['id' => $post->id, 'action' => 'delete ']) ?>" method="post">          
+          <button type="submit" class="btn btn-danger btn-round">Hapus</button>
+        </form>
+
       </article>
 
       <?php } ?>
