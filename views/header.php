@@ -14,7 +14,7 @@
           <nav id="primary-nav" class="inline">
             <ul>
               <li><a href="<?php echo $router->generate('home') ?>">Beranda</a></li>
-              <li><a href="#">Tentang</a></li>
+              <li><a href="<?php echo $router->generate('about') ?>">Tentang</a></li>
               <li><a href="<?php echo $router->generate('contact') ?>">Kontak</a></li>
             </ul>
           </nav>

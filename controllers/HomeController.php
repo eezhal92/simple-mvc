@@ -11,6 +11,11 @@ class HomeController
     return view('home', ['posts' => $posts]);
   }
 
+  public function about()
+  {
+    return view('about');
+  }
+
   public function contact()
   {
     $printer = new Printer("Canon");

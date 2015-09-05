@@ -6,6 +6,15 @@
   </div>
 
   <div class="widget">
+    <h2 class="section-header">Kategori</h2>
+    <ul>
+      <li><a href="#">Uncategorized</a></li>
+      <li><a href="#">Foo Bar</a></li>
+      <li><a href="#">What Else?</a></li>
+    </ul>
+  </div>
+  
+  <div class="widget">
     <h2 class="section-header">Sosial</h2>
     <ul>
       <li><a href="#">Facebook</a></li>

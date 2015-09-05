@@ -5,6 +5,7 @@
 $router = new AltoRouter;
 
 $router->map('GET', '/', 'HomeController@index', 'home');
+$router->map('GET', '/about', 'HomeController@about', 'about');
 $router->map('GET', '/contact', 'HomeController@contact', 'contact');
 $router->map('GET', '/posts/[i:id]', 'PostController@show', 'post-show');
 $router->map('GET', '/posts/create', 'PostController@create', 'post-create');
