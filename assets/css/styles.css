@@ -199,6 +199,25 @@ nav.inline ul li a:hover {
   text-decoration: underline;
 }
 
+.alert {
+  padding: 10 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+}
+
+.alert ul li {
+  list-style: none;
+  padding:8px 20px;
+}
+
+.alert-danger {
+  background: #f2dede;
+  background-color: #f2dede;
+  color: #a94442;
+  border-color: #ebccd1;
+}
+
 .footer {
   background: #152230;
   overflow: hidden;
