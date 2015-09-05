@@ -4,7 +4,13 @@
   <div class="container">
     <div id="news" class="news">
       <h2 class="section-header">Artikel</h2>
-            
+
+      <?php if(Session::exists('success')) { ?>
+          <div class="alert alert-success">
+            <?php  echo Session::flash('success') ?>
+          </div>
+      <?php } ?>
+
       <?php foreach ($posts as $post) { ?>
       <article class="news-item">
         <img src="<?php echo assets('assets/img/gambar_artikel.jpg') ?>" alt="" />
@@ -13,7 +19,7 @@
         <p>
           <?php echo $post->body ?>
         </p>
-        <a href="#" class="btn btn-warning btn-round">Edit</a>
+        <a href="<?php echo $router->generate('post-edit', ['id' => $post->id]) ?>" class="btn btn-warning btn-round">Edit</a>
         <a href="#" class="btn btn-danger btn-round">Hapus</a>
       </article>
 
