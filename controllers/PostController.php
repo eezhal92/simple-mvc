@@ -17,8 +17,6 @@ class PostController
 
   public function store()
   {
-    // dd(Input::all());
-
     $v = new Validator;
 
     $v->validate(Input::all(), [
@@ -27,7 +25,7 @@ class PostController
     ]);
 
     if(!$v->passed()) {
-      Redirect::back(['key' => 'errors', 'values' => $v->errors()]);
+      return Redirect::back(['key' => 'errors', 'values' => $v->errors()]);
     }
 
     $post = $this->post->create([
@@ -36,7 +34,7 @@ class PostController
     ]);
 
     if($post) {
-      return Redirect::to('/contact');
+      return Redirect::to('/');
     }
   }
 
@@ -48,4 +46,5 @@ class PostController
 
     return view('posts.show', ['post' => $post]);
   }
+
 }

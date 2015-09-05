@@ -1,15 +1,21 @@
 <?php require BASE_VIEW . "header.php" ?>
 
-<?php
-
-  if(Session::exists('error')) {
-    die(Session::get('error'));
-  }
- ?>
 <div class="main">
   <div class="container">
     <div id="news" class="news">
       <h2 class="section-header">Buat Artikel</h2>
+
+      <?php if(Session::exists('errors')) { ?>
+        <div class="alert alert-danger">
+          <ul>
+              <?php
+              foreach(Session::flash('errors') as $error) {
+                echo "<li>{$error}</li>";
+              }
+               ?>
+          </ul>
+        </div>
+      <?php } ?>
 
       <form class="#" action="<?php echo $router->generate('post-store') ?>" method="post">
 

@@ -4,7 +4,7 @@
   <div class="container">
     <div id="news" class="news">
       <h2 class="section-header">Artikel</h2>
-
+            
       <?php foreach ($posts as $post) { ?>
       <article class="news-item">
         <img src="<?php echo assets('assets/img/gambar_artikel.jpg') ?>" alt="" />

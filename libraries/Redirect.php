@@ -36,7 +36,7 @@ class Redirect
   public static function back($data = [])
   {
     if(count($data)) {
-      Session::flash('error', 'sdf');
+      Session::flash($data['key'], $data['values']);
     }
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   }
