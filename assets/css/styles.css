@@ -1,0 +1,278 @@
+/*
+ * Blogku, Simple CSS
+ * Copyright 2015 eezhal92.
+ * Licensed under MIT
+ */
+
+body {
+  margin: 0px;
+}
+
+html, body {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+  margin: 0px;
+}
+
+ul {
+  padding:0px;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table thead tr th {
+  text-align: left;
+}
+
+table tbody td {
+  border-top: 1px solid #ececec;
+}
+
+/* Form */
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 4px 8px;
+  border:1px solid #adadad;
+  -webkit-appearance: none;
+  /* Untuk tidak merubah width */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+div.form-group {
+  margin-bottom: 15px;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+/* Buttons*/
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  cursor: pointer;
+  margin: 5px 0;
+  /*border: 1px solid #000;*/
+}
+
+.btn-primary {
+  background: #337ab7;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+.btn-default {
+  color: #000;
+  background: #ececec;
+}
+
+.btn-warning {
+  background: #f0ad4e;
+}
+
+.btn-danger {
+  background: #c9302c;
+}
+
+.btn-warning, .btn-danger {
+  color:#fff;
+}
+
+.btn-round {
+  border-radius: 1000px;
+}
+
+button.btn {
+  border: none;
+}
+
+button.btn, a.btn {
+  text-decoration: none;
+}
+
+/* Layout */
+
+.container {
+  max-width: 978px;
+  margin:0 auto;
+}
+
+.main {
+  margin: 60px 0 60px 0;
+  overflow: hidden;
+  min-height: 363px;
+}
+
+@media (min-width: 978px) {
+  .news {
+    float:left;
+    width: 660px;
+    background: #fff;
+  }
+
+  .sidebar {
+    float:left;
+    width: 290px;
+    margin-left: 28px;
+  }
+}
+.widget {
+  margin-bottom: 20px;
+}
+
+.widget ul li {
+  list-style: none;
+}
+
+@media (max-width: 977px) {
+  .container {
+    margin: 0 15px;
+  }
+
+  .news, .sidebar {
+    width: 100%;
+  }
+}
+
+.header {
+  background: #000;
+  overflow: hidden;
+  height: 80px;
+}
+
+.header h1#title {
+  float:left;
+  margin-top: 20px;
+}
+
+.header h1#title a, .header h1#title a:hover {
+  color:#fff;
+  text-decoration: none;
+}
+
+.header nav#primary-nav {
+  float:right;
+  margin-top: 20px;
+}
+
+nav.inline ul li {
+  margin-right: 15px;
+  padding: 5px;
+}
+
+nav.inline ul li:last-child {
+  margin-right: 0px;
+}
+
+nav.inline ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav.inline ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer {
+  background: #152230;
+  overflow: hidden;
+  height: 80px;
+}
+
+.footer nav {
+  float: left;
+  margin-top: 20px;
+}
+
+.footer p.copyright{
+  float: right;
+  margin-top: 30px;
+}
+
+.header, .footer {
+  color: #fff;
+}
+
+article.news-item {
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f2f2;
+}
+
+article.news-item h3 {
+  font-size: 22px;
+}
+
+article.news-item h3 a {
+  text-decoration: none;
+  color: #152230;
+}
+
+article.news-item h3 a:hover {
+  text-decoration: none;
+  color: #43658A;
+}
+
+article.news-item img {
+  float: left;
+  padding: 0 15px 10px 0;
+}
+
+article.news-item span.date {
+  font-size: 14px;
+  font-style: italic;
+}
+
+article.news-content .meta {
+  margin-bottom: 10px;
+}
+
+article.news-content .meta span.date {
+  font-style: italic;
+}
+
+article.news-item p {
+  margin-top: 10px;
+}
+
+article.news-content p {
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+article.news-content h1, .section-header {
+  margin: 5px 0 15px;
+  border-bottom: 1px solid #152230;
+  padding-bottom: 5px;
+}

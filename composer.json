@@ -1,0 +1,15 @@
+{
+    "autoload": {
+      "classmap": [
+        "libraries",
+        "controllers",
+        "models"
+      ],
+      "files": [
+        "helpers.php"
+      ]
+    },
+    "require": {
+        "altorouter/altorouter": "^1.1"
+    }
+}
