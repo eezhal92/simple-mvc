@@ -52,7 +52,7 @@ abstract class Model {
   }
 
   /**
-   * Mengambil semua data record.
+   * Membuat record baru.
    *
    * @return boolean
    */
@@ -60,6 +60,22 @@ abstract class Model {
   {
     try {
       $this->db->insert($this->table, $data);
+
+      return true;
+    } catch(Exception $e) {
+      die($e->getMessage);
+    }
+  }
+
+  /**
+   * Memperbarui record tertentu.
+   *
+   * @return boolean
+   */
+  public function update($id, $data = [])
+  {
+    try {
+      $this->db->update($this->table, $id,$data);
 
       return true;
     } catch(Exception $e) {
